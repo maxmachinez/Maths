@@ -1,0 +1,16 @@
+#week 13
+import factors as listFactors
+
+#highest common factor:
+
+def hcf(n, f):
+    commonFactors = []
+    nFactors = listFactors(n)
+    fFactors = listFactors(f)
+    for i in nFactors:
+        for j in fFactors:
+            if i == j:
+                commonFactors.append(i)
+    return max(commonFactors)
+ 
+print(hcf(74, 148))
